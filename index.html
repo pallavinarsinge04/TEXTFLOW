@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Text_Flow</title>
+    <style>
+        body
+        {
+            text-align: center;
+            background-color:#EEEDEB;
+        }
+        h1{
+            color: #41B06E;
+        }
+        .input-text
+        {
+            width: 500px;
+            height: 150px;
+            color: #2F3645;
+        }
+
+        .button
+        {
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            
+        }
+        .button1
+        {
+            background-color: #8DECB4;
+            height: 50px;
+            font-family: 'Times New Roman', Times, serif;
+            border-radius: 12px;
+        }
+   </style>
+</head>
+<body>
+    <div>
+        <h1><i>Text Flow</i></h1>
+        <input type="text" id="input1" class="input-text">
+    <p id="result1"></p>
+    </div>
+    <div class="button">
+        <button id="upper_case" class="button1" onclick="uppercase()">Upper Case</button>
+        <button id="lower_case" class="button1"onclick="lowercase()">Lower Case</button>
+        <button id="char_count" class="button1"onclick="charCount()">Char Count</button>
+        <button id="word_count" class="button1"onclick="wordcount()">Word Count</button>
+        
+    </div>
+    <script>
+        const inputElement= document.getElementById("input1");
+        const resultElement = document.getElementById("result1");
+        
+
+        function uppercase()
+
+         {
+            resultElement.innerText = inputElement.value.toUpperCase()
+        }
+
+        function lowercase()
+
+         {
+            resultElement.innerText = inputElement.value.toLowerCase()
+        }
+
+        function charCount()
+
+         {
+            
+            resultElement.innerText = `Total characters: ${inputElement.value.length}`;
+
+        }
+
+        function wordcount()
+
+         {
+            resultElement.innerText = `Total Words: ${inputElement.value.split(" ").length}`;
+            
+        }
+
+
+
+    </script>
+</body>
+</html>
